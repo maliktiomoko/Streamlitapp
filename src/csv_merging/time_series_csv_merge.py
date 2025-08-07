@@ -1036,9 +1036,9 @@ def clean_llm_list_output(llm_output: str):
 
 def merge_process(schemas, project_description, dfs, pattern_list):
     try:
-        # raw_merge_code = synthesize_merge_code(schemas, pattern_list, project_description, n_candidates=1)
+        raw_merge_code = synthesize_merge_code(schemas, pattern_list, project_description, n_candidates=1)
         # print('CODE FOR MERGING', raw_merge_code)
-        raw_merge_code = PREDEFINED_CODE
+        # raw_merge_code = PREDEFINED_CODE
         merge_candidates = split_candidates(raw_merge_code)
         cleaned_code = clean_code(merge_candidates[0])
         # for i in range(len(dfs)):
