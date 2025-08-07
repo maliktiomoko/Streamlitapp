@@ -131,7 +131,7 @@ def exec_code_with_imports(code_str, namespace):
     exec("\n".join(code_lines), namespace)
 
 
-def call_openai(content, model=MODEL_NAME, temperature=0.3, max_tokens=10000):
+def call_openai(content, model=MODEL_NAME, temperature=0.3, max_tokens=8000):
     client = OpenAI(
     base_url='https://api.deepseek.com',
     api_key="sk-799437a080f04354bc1dd27b4a6c823f")
@@ -325,7 +325,7 @@ MODEL_NAME = "deepseek-chat"
 OPENAI_API_BASE = "https://api.deepseek.com"
 OPENAI_API_KEY = "sk-799437a080f04354bc1dd27b4a6c823f"
 
-def call_openai(prompt, temperature=0.3, max_tokens=10000):
+def call_openai(prompt, temperature=0.3, max_tokens=8000):
     client = OpenAI(
     base_url='https://api.deepseek.com',
     api_key="sk-799437a080f04354bc1dd27b4a6c823f")
