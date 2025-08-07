@@ -2,7 +2,6 @@ import os
 import numpy as np
 import pandas as pd
 import streamlit as st
-import lightgbm as lgb
 from sklearn.preprocessing import OneHotEncoder
 from .utils import compute_metrics, plot_true_vs_pred
 from src.csv_merging.time_series_csv_merge import summarize_csvs, synthesize_merge_code, split_candidates, exec_code_with_imports, clean_code
