@@ -314,10 +314,13 @@ def train_and_predict(X_train, y_train, X_test, X_val=None, y_val=None):
     return pred_test, val_mse
 
 # --- Config & Client ---
-MODEL_NAME = "qwen2.5-coder-32b-instruct"
-OPENAI_API_BASE = "http://api.openai.ukrc.huawei.com:4000/v1"
-OPENAI_API_KEY = "sk-1234"
-client = OpenAI(base_url=OPENAI_API_BASE, api_key=OPENAI_API_KEY)
+# MODEL_NAME = "qwen2.5-coder-32b-instruct"
+# OPENAI_API_BASE = "http://api.openai.ukrc.huawei.com:4000/v1"
+# OPENAI_API_KEY = "sk-1234"
+
+MODEL_NAME = "deepseek-chat"
+OPENAI_API_BASE = "https://api.deepseek.com"
+OPENAI_API_KEY = "sk-799437a080f04354bc1dd27b4a6c823f"
 
 def call_openai(prompt, temperature=0.3, max_tokens=10000):
     resp = client.chat.completions.create(
