@@ -326,6 +326,9 @@ OPENAI_API_BASE = "https://api.deepseek.com"
 OPENAI_API_KEY = "sk-799437a080f04354bc1dd27b4a6c823f"
 
 def call_openai(prompt, temperature=0.3, max_tokens=10000):
+    client = OpenAI(
+    base_url='https://api.deepseek.com',
+    api_key="sk-799437a080f04354bc1dd27b4a6c823f")
     resp = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[{"role":"user","content":prompt}],
