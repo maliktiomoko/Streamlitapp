@@ -132,13 +132,6 @@ def exec_code_with_imports(code_str, namespace):
 
 
 def call_openai(content, model=MODEL_NAME, temperature=0.3, max_tokens=10000):
-    client = OpenAI(
-    base_url='https://api.deepseek.com',
-    api_key="sk-799437a080f04354bc1dd27b4a6c823f")
-    client = OpenAI(
-    base_url='https://api.deepseek.com',
-    api_key="sk-799437a080f04354bc1dd27b4a6c823f",
-    )
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": content}],
